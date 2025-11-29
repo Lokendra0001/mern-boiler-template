@@ -1,216 +1,245 @@
-MERN Boilerplate with Backend Authentication 🔥
-A production-ready MERN stack starter kit with complete backend authentication system and clean React Vite frontend setup. ⚡
+# create-mern-boiler 🔥
 
-🎯 Overview
-This boilerplate provides a solid foundation for building full-stack web applications with MongoDB, Express.js, React, and Node.js. It features a complete backend authentication system with JWT tokens and a minimal, ready-to-customize React frontend. 🚀
+<div align="center">
 
-✨ What's Included
-🔧 Backend Features ✅
-🔐 Complete JWT Authentication System
+![MERN](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 
-👥 User Registration & Login APIs
+</div>
 
-🛡️ Protected Route Middleware
+A production-ready **MERN stack starter kit** with complete backend authentication and a clean React + Vite frontend setup.
 
-🔒 Password Hashing with bcrypt
+Generate a full MERN project in seconds using a single CLI command:
 
-🗄️ MongoDB Integration with Mongoose
+```bash
+npx create-mern-boiler my-app
+```
 
-🌐 CORS Configuration
+---
 
-⚙️ Environment Variables Setup
+## 🎯 Overview
 
-❌ Error Handling Middleware
+`create-mern-boiler` provides a solid foundation for full-stack web applications with:
 
-🔐 Security Best Practices
+- MongoDB, Express.js, React, Node.js (MERN) stack
+- Complete backend authentication system with JWT tokens
+- Minimal, ready-to-customize React frontend
+- Pre-configured project structure and API utilities
 
-🎨 Frontend Features ✅
-⚡ React 18 with Vite (Fast Development)
+This allows you to focus on **building features, not boilerplate setup**.
 
-🧭 React Router DOM Setup
+---
 
-📡 Axios Pre-configured for API Calls
+## ✨ Features
 
-🎯 React Icons Integrated
+### ✅ Backend Features
 
-📱 Responsive UI Components
+- Complete JWT authentication system
+- User registration & login APIs
+- Protected route middleware
+- Password hashing with **bcrypt**
+- MongoDB integration with **Mongoose**
+- CORS configuration
+- Environment variables setup (`.env`)
+- Error handling middleware
+- Basic security best practices
 
-🔧 Environment Configuration
+### ✅ Frontend Features
 
-🔌 API Utility Functions Ready
+- **React 18** with **Vite** for fast development
+- **React Router DOM** setup
+- Pre-configured **Axios** for API calls
+- **React Icons** integrated
+- Responsive-ready UI structure
+- Environment configuration ready
+- API utility functions for easy backend interaction
+- Clean project structure
 
-🏗️ Clean Project Structure
+---
 
-❌ What's NOT Included
-🎭 Frontend Authentication State Management
+## ⚠️ What’s NOT Included (By Design)
 
-🚫 Protected Routes on Frontend
+These are intentionally left for you to implement according to your own needs:
 
-🔄 Authentication Context/Redux
+- Frontend authentication state management
+- Protected routes on the frontend
+- Login/Register form components
+- Token storage logic (localStorage/cookies)
+- Authentication context/Redux setup
 
-📝 Pre-built Auth Forms & Components
+---
 
-💾 Frontend Token Storage Logic
+## 📝 Backend API Endpoints
 
-📋 Backend API Endpoints
-🔐 Authentication Routes
-Method Endpoint Description Body
-POST /api/user/signup Register new user {name, email, password}
-POST /api/user/signin Login user {email, password}
-GET /api/user/me Get current user Protected
-POST /api/user/logout Logout user -
-🛠 Tech Stack
-🎨 Frontend
-React 18 - UI Library ⚛️
+| Method | Endpoint           | Description                  | Body                        |
+| ------ | ------------------ | ---------------------------- | --------------------------- |
+| POST   | `/api/user/signup` | Register new user            | `{ name, email, password }` |
+| POST   | `/api/user/signin` | Login user                   | `{ email, password }`       |
+| GET    | `/api/user/me`     | Get current user (protected) | `-`                         |
+| POST   | `/api/user/logout` | Logout user                  | `-`                         |
 
-Vite - Build Tool & Dev Server 🚀
+---
 
-React Router DOM - Client-side Routing 🧭
+## 🛠 Tech Stack
 
-Axios - HTTP Client 📡
+**Frontend**
 
-React Icons - Icon Library 🎯
+- ⚛️ React 18
+- ⚡ Vite
+- 🧭 React Router DOM
+- 🌐 Axios
+- 🎨 React Icons
 
-🔧 Backend
-Node.js - Runtime Environment 🏃‍♂️
+**Backend**
 
-Express.js - Web Framework 🌐
+- 🟢 Node.js
+- 🚏 Express.js
+- 🍃 MongoDB
+- 🧬 Mongoose
+- 🔐 JSON Web Tokens (JWT)
+- 🧂 bcryptjs
+- 🌍 CORS
 
-MongoDB - Database 🗄️
+---
 
-Mongoose - ODM 🎯
+## 📦 Installation & Setup
 
-JWT - Authentication Tokens 🔐
+### 1️⃣ Create a new project
 
-bcryptjs - Password Hashing 🔒
+```bash
+npx create-mern-boiler my-app
+cd my-app
+```
 
-CORS - Cross-Origin Resource Sharing 🌐
+### 2️⃣ Install dependencies
 
-📦 Installation & Setup
-🚀 Quick Start
-bash
+```bash
+# Backend
+cd server
+npm install
 
-# 1. Install backend dependencies
+# Frontend
+cd ../client
+npm install
+```
 
-cd server && npm install
+### 3️⃣ Setup environment variables
 
-# 2. Install frontend dependencies
+**Backend (`server/.env`):**
 
-cd ../client && npm install
-
-# 3. Setup environment variables
-
-# Server: PORT, MONGODB_URI, JWT_SECRET
-
-# Client: VITE_API_URL
-
-# 4. Start development servers
-
-# Terminal 1: cd server && npm run dev
-
-# Terminal 2: cd client && npm run dev
-
-⚙️ Environment Setup
-🔧 Backend (.env)
-
-env
+```env
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/mern-app
 JWT_SECRET=your_strong_jwt_secret_here
-🎨 Frontend (.env)
+```
 
-env
+**Frontend (`client/.env`):**
+
+```env
 VITE_API_URL=http://localhost:5000/api
+```
 
-🏗 Project Structure
-text
+### 4️⃣ Start development servers
+
+```bash
+# Backend
+cd server
+npm run dev
+
+# Frontend (in another terminal)
+cd client
+npm run dev
+```
+
+---
+
+## 🏗 Project Structure
+
+```text
 mern-boilerplate/
-├── 🎨 client/ # React Vite Frontend
-│ ├── src/
-│ │ ├── components/ # UI Components 🧩
-│ │ ├── pages/ # Page Components 📄
-│ │ └── utils/ # API Utilities 🔌
-├── 🔧 server/ # Express Backend
-│ ├── controllers/ # Route Logic 🎮
-│ ├── models/ # Database Models 🗄️
-│ ├── routes/ # API Routes 🛣️
-│ ├── middleware/ # Auth & Error Middleware 🛡️
-│ └── config/ # DB Configuration ⚙️
-└── 📖 README.md
+├── client/          # React Vite frontend
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── utils/
+├── server/          # Express backend
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   └── config/
+└── README.md
+```
 
-🎯 Usage Notes
-🔧 For Backend Development
-✅ Complete authentication system ready
+---
 
-✅ JWT tokens generated and verified
+## 🎯 Usage Notes
 
-✅ Protected routes with middleware
+### Backend Development
 
-✅ MongoDB models and connections setup
+- Ready-to-use authentication system
+- JWT tokens generated and verified
+- Protected routes with middleware
+- MongoDB models and connections setup
+- Error handling implemented
 
-✅ Error handling implemented
+### Frontend Development
 
-🎨 For Frontend Development
-✅ Basic React app structure
+- Basic React app structure ready
+- API utility functions provided
+- Routing setup complete
 
-✅ API utility functions provided
+You still need to implement:
 
-✅ Routing setup ready
+- Authentication state management
+- Token storage (localStorage/cookies)
+- Protected route components
+- Login/Register UI components
 
-🔄 You need to implement:
+---
 
-🎭 Authentication state management
+## 🔧 Available Scripts
 
-💾 Token storage (localStorage/cookies)
+### Backend (inside `server`)
 
-🚫 Protected route components
+```bash
+npm run dev    # Start dev server with nodemon
+npm start      # Start production server
+```
 
-📝 Login/Register forms UI
+### Frontend (inside `client`)
 
-👤 User context/state
+```bash
+npm run dev     # Start Vite development server
+npm run build   # Build for production
+npm run preview # Preview production build
+```
 
-🔧 Available Scripts
-🔧 Backend
+---
 
-npm run dev - Start development server with nodemon 🔄
+## 🚀 Deployment Ready
 
-npm start - Start production server 🚀
+- Backend configured for production usage
+- Frontend build system optimized
+- Environment variables and CORS configuration ready for deployment
 
-🎨 Frontend
+---
 
-npm run dev - Start Vite development server ⚡
+## 👨‍💻 Ideal For
 
-npm run build - Build for production 📦
+- Quickly starting new MERN projects
+- Learning full-stack development
+- Prototyping apps
+- Projects needing backend authentication out-of-the-box
 
-npm run preview - Preview production build 👀
+---
 
-🚀 Deployment Ready
-✅ Backend configured for production
+## 💡 Next Steps After Installation
 
-✅ Frontend build system optimized
-
-✅ Environment variables setup
-
-✅ CORS configured for deployment
-
-📝 Ideal For
-🚀 Starting new MERN projects quickly
-
-📚 Learning full-stack development
-
-💡 Prototyping applications
-
-🔐 Projects needing backend authentication
-
-👨‍💻 Developers who want to implement their own frontend auth logic
-
-💡 Next Steps After Installation
-🎭 Implement frontend authentication context
-
-📝 Create login/register form components
-
-💾 Add token storage mechanism
-
-🚫 Implement protected routes on frontend
-
-🛠️ Add your business logic and features
+- Implement frontend authentication context/state
+- Create login/register forms
+- Add token storage (localStorage or cookies)
+- Implement protected routes
+- Add your own business logic and features
