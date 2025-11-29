@@ -1,0 +1,29 @@
+{
+  "name": "create-mern-boiler",
+  "version": "1.0.3",
+  "description": "A modern CLI tool to generate a production-ready MERN boilerplate using React, Express, and MongoDB.",
+  "main": "bin/index.js",
+  "bin": {
+    "create-mern-boiler": "./bin/index.js"
+  },
+  "keywords": [
+    "mern",
+    "mern-stack",
+    "mern-template",
+    "mern-starter",
+    "mern-boilerplate",
+    "fullstack",
+    "react",
+    "express",
+    "mongodb",
+    "nodejs",
+    "cli",
+    "cli-tool",
+    "project-generator",
+    "scaffolding",
+    "starter-kit",
+    "template-generator"
+  ],
+  "author": "Lokendra Rajpurohit",
+  "license": "MIT"
+}
