@@ -55,11 +55,12 @@ const handleGetCurrentUser = async (req, res) => {
 
 const handleLogoutUser = async (req, res) => {
     try {
-        res.clearCookie("tv_authToken", {
+        res.clearCookie("auth_token", {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
             sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
         });
+
         return res.status(200).json({ msg: "User LogOut Successfully!" });
     } catch (err) {
         console.log(err);

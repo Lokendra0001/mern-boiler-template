@@ -11,16 +11,17 @@ const generateTokenAndSendCookie = (user, res) => {
 
     const token = jwt.sign(userPayload, jwtSecret);
 
-    res.clearCookie('auth_token', {
+    res.clearCookie("auth_token", {
         httpOnly: true,
-        secure: false,
-        sameSite: 'lax',
+        secure: process.env.NODE_ENV === "production",
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
     });
-
-    res.cookie('auth_token', token, {
+    
+    res.cookie("auth_token", token, {
         httpOnly: true,
-        secure: false,
-        sameSite: "lax"
+        secure: process.env.NODE_ENV === "production",
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+        maxAge: 24 * 60 * 60 * 1000, // 1 day
     });
 
 }
