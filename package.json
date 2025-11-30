@@ -46,5 +46,12 @@
   "bugs": {
     "url": "https://github.com/Lokendra0001/mern-boiler-template/issues"
   },
-  "private": false
+  "private": false,
+  "files": [
+    "bin",
+    "server",
+    "client",
+    "README.md",
+    "package.json"
+  ]
 }
