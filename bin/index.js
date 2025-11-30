@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 
 // Get project name from command line argument or default
-const projectName = process.argv[2] || 'create-mern-boilerkit';
+const projectName = process.argv[2] || 'mern-app';
 
 // Check if folder already exists
 if (fs.existsSync(projectName)) {
@@ -14,11 +14,11 @@ if (fs.existsSync(projectName)) {
 
 console.log(`🚀 Creating MERN app: ${projectName}...`);
 
-// Clone the boilerplate repo into the given folder
 try {
-  execSync(`git clone https://github.com/Lokendra0001/mern-boiler-template ${projectName}`, { stdio: 'inherit' });
+  // Use degit instead of git clone
+  execSync(`npx degit Lokendra0001/mern-boiler-template ${projectName}`, { stdio: 'inherit' });
 } catch (err) {
-  console.error('❌ Failed to clone repository. Please check your internet connection or repository URL.');
+  console.error('❌ Failed to fetch template. Please check your internet connection or repository URL.');
   process.exit(1);
 }
 
