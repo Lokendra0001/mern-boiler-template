@@ -1,4 +1,4 @@
-# create-mern-boiler 🔥
+# create-mern-boilerkit 🔥
 
 <div align="center">
 
@@ -14,14 +14,14 @@ A production-ready **MERN stack starter kit** with complete backend authenticati
 Generate a full MERN project in seconds using a single CLI command:
 
 ```bash
-npx create-mern-boiler my-app
+npx create-mern-boilerkit my-app
 ```
 
 ---
 
 ## 🎯 Overview
 
-`create-mern-boiler` provides a solid foundation for full-stack web applications with:
+`create-mern-boilerkit` provides a solid foundation for full-stack web applications with:
 
 - MongoDB, Express.js, React, Node.js (MERN) stack
 - Complete backend authentication system with JWT tokens
@@ -109,7 +109,7 @@ These are intentionally left for you to implement according to your own needs:
 ### 1️⃣ Create a new project
 
 ```bash
-npx create-mern-boiler my-app
+npx create-mern-boilerkit my-app
 cd my-app
 ```
 
