@@ -1,6 +1,6 @@
 {
   "name": "create-mern-boilerkit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A modern CLI tool to generate a production-ready MERN boilerplate with React, Express, MongoDB, JWT authentication, and a clean Vite frontend.",
   "main": "bin/index.js",
   "bin": {
